@@ -10,7 +10,7 @@ This page contains a Web implementation of a circular slide rule to be used in t
 
 The app will technically work on mobile, but works best when viewed from a browser on a desktop or laptop computer. Maximize your browser, and then refresh the page, to get the largest slide rule your screen is capable of drawing. 
 
-Click and drag to rotate either the inner dial or the cursor; toggle which one with the button in the lower left. The button in the lower right can be used to lock / unlock movement as needed. 
+Click and drag to rotate either the inner dial or the cursor; toggle which one with the button on the left. The button on the right can be used to lock / unlock movement as needed. 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js">
 </script>
