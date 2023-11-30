@@ -484,10 +484,10 @@ function drawK() {
  * load assets, blocking until complete
  */
 function preload() {
-  A = loadTable("../code/A.csv", "csv");
-  CI = loadTable("../code/CI.csv", "csv");
-  D = loadTable("../code/D.csv", "csv");
-  K = loadTable("../code/K.csv", "csv");
+  A = loadTable("assets/code/A.csv", "csv");
+  CI = loadTable("assets/code/CI.csv", "csv");
+  D = loadTable("assets/code/D.csv", "csv");
+  K = loadTable("assets/code/K.csv", "csv");
 }
 
 /**
