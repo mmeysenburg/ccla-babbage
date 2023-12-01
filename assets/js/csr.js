@@ -494,8 +494,8 @@ function preload() {
  * Setup the application
  */
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-
+  let canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent('csr-holder');
   // fullscreen(true);
 
   A_COLOR = color(205, 168, 130);
@@ -580,6 +580,8 @@ function windowResized() {
   C_RAD = B_RAD - 50.0;
   CI_RAD = C_RAD - 50.0;
 
+  resizeCanvas(windowWidth, windowHeight);
+  
   makeInnerDisc();
   makeOuterDisc();
 }
