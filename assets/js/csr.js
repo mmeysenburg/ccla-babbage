@@ -516,21 +516,33 @@ function setup() {
   makeInnerDisc();
   makeOuterDisc();
   
-  let btnCD = createButton('Change to cursor rotation');
-  btnCD.position(0, windowHeight - 50);
-  btnCD.mousePressed(() => {
-    isCursor = !isCursor;
-    btnCD.html(isCursor ? 'Change to disc rotation' : 'Change to cursor rotation');
-  });
+  // let btnCD = createButton('Change to cursor rotation');
+  // btnCD.position(0, windowHeight - 50);
+  // btnCD.mousePressed(() => {
+  //   isCursor = !isCursor;
+  //   btnCD.html(isCursor ? 'Change to disc rotation' : 'Change to cursor rotation');
+  // });
   
-  let btnLock = createButton('Lock');
-  btnLock.position(0, windowHeight);
-  btnLock.mousePressed(() => {
-    isLocked = !isLocked;
-    btnLock.html(isLocked ? 'Unlock' : 'Lock');
-  });
+  // let btnLock = createButton('Lock');
+  // btnLock.position(0, windowHeight);
+  // btnLock.mousePressed(() => {
+  //   isLocked = !isLocked;
+  //   btnLock.html(isLocked ? 'Unlock' : 'Lock');
+  // });
 }
 
+function toggleCD() { 
+  isCursor = !isCursor;
+  lbl = isCursor ? 'Change to disc rotation' : 'Change to cursor rotation');
+  document.getElementById('btnCD').innerHTML(lbl);
+}
+
+function toggleLock() {
+  isLocked = !isLocked;
+  lbl = isLocked ? 'Unlock' : 'Lock';
+  document.getElementById('btnLock').innerHTML(lbl);
+}
+  
 function draw() {
   background(234, 219, 203);
 
