@@ -37,12 +37,12 @@ Click on the "Reset" button to reset the simulator for another computation.
     </tr>
     <tr>
       <td>0</td>
-      <td><input type="text" id="inpF0">0</input></td>
-      <td><input type="text" id="inpD1">0</input></td>
-      <td><input type="text" id="inpD2">0</input></td>
-      <td><input type="text" id="inpD3">0</input></td>
-      <td><input type="text" id="inpD4">0</input></td>
-      <td><input type="text" id="inpD5">0</input></td>
+      <td><input type="text" id="inpF0" value="0"></td>
+      <td><input type="text" id="inpD1" value="0"></td>
+      <td><input type="text" id="inpD2" value="0"></td>
+      <td><input type="text" id="inpD3" value="0"></td>
+      <td><input type="text" id="inpD4" value="0"></td>
+      <td><input type="text" id="inpD5" value="0"></td>
     </tr>
   </table>
 </div>
