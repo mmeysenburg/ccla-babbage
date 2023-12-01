@@ -16,8 +16,10 @@ This page contains a Web implementation of a circular slide rule to be used in t
 
 The app will technically work on mobile, but works best when viewed from a browser on a desktop or laptop computer. Maximize your browser, and then refresh the page, to get the largest slide rule your screen is capable of drawing. 
 
-Click and drag to rotate either the inner dial or the cursor; toggle which one with the button on the left. The button on the right can be used to lock / unlock movement as needed. 
+Click and drag to rotate either the inner dial or the cursor; toggle which one with the button below. The other button can be used to lock / unlock movement as needed. 
 
 <div id="csr-holder">
+  <button id="btnCD" onclick="toggleCD()">Change to cursor rotation</button>
+  <button onclick="btnLock" onclick="toggleLock()">Lock</button>
   <!-- the sketch will be loaded here -->
 </div>
