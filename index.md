@@ -9,6 +9,7 @@ This site contains resources for the [Charles Babbage, Ada Lovelace, and the Daw
 The most important pages are pinned here: 
 
 1. [Circular slide rule app](./2023-11-30-slide-rule/)
+2. [Difference engine simulation](./2023-12-01-difference-engine/)
 
 New content will be added periodically, and each new addition will be 
 accompanied by a new blog post. 
