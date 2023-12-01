@@ -517,14 +517,14 @@ function setup() {
   makeOuterDisc();
   
   let btnCD = createButton('Change to cursor rotation');
-  btnCD.position(0, windowHeight);
+  btnCD.position(0, windowHeight - 50);
   btnCD.mousePressed(() => {
     isCursor = !isCursor;
     btnCD.html(isCursor ? 'Change to disc rotation' : 'Change to cursor rotation');
   });
   
   let btnLock = createButton('Lock');
-  btnLock.position(windowWidth - 100, windowHeight);
+  btnLock.position(0, windowHeight);
   btnLock.mousePressed(() => {
     isLocked = !isLocked;
     btnLock.html(isLocked ? 'Unlock' : 'Lock');
