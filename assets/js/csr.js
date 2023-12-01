@@ -534,13 +534,13 @@ function setup() {
 function toggleCD() { 
   isCursor = !isCursor;
   lbl = isCursor ? 'Change to disc rotation' : 'Change to cursor rotation';
-  document.getElementById('btnCD').innerHTML(lbl);
+  document.getElementById('btnCD').innerHTML = lbl;
 }
 
 function toggleLock() {
   isLocked = !isLocked;
   lbl = isLocked ? 'Unlock' : 'Lock';
-  document.getElementById('btnLock').innerHTML(lbl);
+  document.getElementById('btnLock').innerHTML = lbl;
 }
   
 function draw() {
