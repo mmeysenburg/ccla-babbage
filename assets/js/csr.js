@@ -533,7 +533,7 @@ function setup() {
 
 function toggleCD() { 
   isCursor = !isCursor;
-  lbl = isCursor ? 'Change to disc rotation' : 'Change to cursor rotation');
+  lbl = isCursor ? 'Change to disc rotation' : 'Change to cursor rotation';
   document.getElementById('btnCD').innerHTML(lbl);
 }
 
