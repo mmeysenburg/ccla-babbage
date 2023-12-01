@@ -20,6 +20,6 @@ Click and drag to rotate either the inner dial or the cursor; toggle which one w
 
 <div id="csr-holder">
   <button id="btnCD" onclick="toggleCD()">Change to cursor rotation</button>
-  <button onclick="btnLock" onclick="toggleLock()">Lock</button>
+  <button id="btnLock" onclick="toggleLock()">Lock</button>
   <!-- the sketch will be loaded here -->
 </div>
