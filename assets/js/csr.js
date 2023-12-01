@@ -532,7 +532,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(234, 219, 203);
 
   // stationary outer disc
   image(outerDisc, 0, 0);
