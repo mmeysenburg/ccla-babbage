@@ -25,7 +25,7 @@ Click on the "Reset" button to reset the simulator for another computation.
   <button id="btnSubmit" onclick="submit()">Submit</button>
   <button id="btnReset" onclick="reset()">Reset</button>
 
-  <table>
+  <table id="tblFD">
     <tr>
       <th>x</th>
       <th>f(x)</th>
