@@ -29,7 +29,7 @@ Click on the "Reset" button to reset the simulator for another computation.
     <tr>
       <th>x</th>
       <th>f(x) = y</th>
-      <th>∆<sup>1</sup>y</th>
+      <th>∆y</th>
       <th>∆<sup>2</sup>y</th>
       <th>∆<sup>3</sup>y</th>
       <th>∆<sup>4</sup>y</th>
