@@ -187,8 +187,8 @@ function drawB() {
   innerDisc.ellipse(
     innerDisc.width / 2.0,
     innerDisc.height / 2.0,
-    K_RAD,
-    K_RAD
+    D_RAD,
+    D_RAD
   );
   innerDisc.fill(C_COLOR);
   innerDisc.ellipse(
