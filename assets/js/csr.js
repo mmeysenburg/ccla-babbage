@@ -11,17 +11,17 @@
 
 // radii
 let OUTER_RAD;
-let A_RAD;
+// let A_RAD;
 let D_RAD;
-let K_RAD;
+// let K_RAD;
 let B_RAD;
 let C_RAD;
 let CI_RAD;
 
 // ring colors
-let A_COLOR;
+// let A_COLOR;
 let D_COLOR;
-let K_COLOR;
+// let K_COLOR;
 let B_COLOR;
 let C_COLOR;
 let CI_COLOR;
@@ -33,7 +33,7 @@ let CI_COLOR;
 let A;
 let CI;
 let D;
-let K;
+// let K;
 
 // graphics buffers for inner and outer discs
 let innerDisc;
@@ -79,9 +79,9 @@ function makeOuterDisc() {
 
   outerDisc.ellipseMode(RADIUS);
 
-  drawA();
+  // drawA();
   drawD();
-  drawK();
+  // drawK();
 }
 
 function calcA(R, x) {
@@ -110,74 +110,74 @@ function log10(x) {
 /**
  * Draw the A scale on the outer disc.
  */
-function drawA() {
-  outerDisc.fill(A_COLOR);
-  outerDisc.ellipse(
-    outerDisc.width / 2.0,
-    outerDisc.height / 2.0,
-    OUTER_RAD,
-    OUTER_RAD
-  );
-  outerDisc.fill(D_COLOR);
-  outerDisc.ellipse(
-    outerDisc.width / 2.0,
-    outerDisc.height / 2.0,
-    A_RAD,
-    A_RAD
-  );
-  outerDisc.fill(0);
+// function drawA() {
+//   outerDisc.fill(A_COLOR);
+//   outerDisc.ellipse(
+//     outerDisc.width / 2.0,
+//     outerDisc.height / 2.0,
+//     OUTER_RAD,
+//     OUTER_RAD
+//   );
+//   outerDisc.fill(D_COLOR);
+//   outerDisc.ellipse(
+//     outerDisc.width / 2.0,
+//     outerDisc.height / 2.0,
+//     A_RAD,
+//     A_RAD
+//   );
+//   outerDisc.fill(0);
 
-  outerDisc.text(
-    "A",
-    outerDisc.width / 2.0 + A_RAD + (OUTER_RAD - A_RAD) / 2.0,
-    outerDisc.height / 2.0 + 20.0
-  );
+//   outerDisc.text(
+//     "A",
+//     outerDisc.width / 2.0 + A_RAD + (OUTER_RAD - A_RAD) / 2.0,
+//     outerDisc.height / 2.0 + 20.0
+//   );
 
-  for (let row = 0; row < A.getRowCount(); row += 2) {
-    r = A.getRow(row);
-    lineLens = A.getRow(row + 1);
+//   for (let row = 0; row < A.getRowCount(); row += 2) {
+//     r = A.getRow(row);
+//     lineLens = A.getRow(row + 1);
 
-    len = r.get(0);
+//     len = r.get(0);
 
-    tic = r.get(1);
-    v = r.get(1);
-    theta = calcA(2.0 * PI, v);
+//     tic = r.get(1);
+//     v = r.get(1);
+//     theta = calcA(2.0 * PI, v);
 
-    rad = A_RAD + 40.0;
-    x1 = rad * cos(theta) + outerDisc.width / 2.0;
-    y1 = rad * sin(theta) + outerDisc.height / 2.0;
-    outerDisc.text(tic, x1, y1);
+//     rad = A_RAD + 40.0;
+//     x1 = rad * cos(theta) + outerDisc.width / 2.0;
+//     y1 = rad * sin(theta) + outerDisc.height / 2.0;
+//     outerDisc.text(tic, x1, y1);
 
-    theta += PI;
-    x1 = rad * cos(theta) + outerDisc.width / 2.0;
-    y1 = rad * sin(theta) + outerDisc.height / 2.0;
-    outerDisc.text(tic, x1, y1);
+//     theta += PI;
+//     x1 = rad * cos(theta) + outerDisc.width / 2.0;
+//     y1 = rad * sin(theta) + outerDisc.height / 2.0;
+//     outerDisc.text(tic, x1, y1);
 
-    for (let col = 1; col <= len; col++) {
-      v = r.get(col);
-      theta = calcA(2.0 * PI, v);
+//     for (let col = 1; col <= len; col++) {
+//       v = r.get(col);
+//       theta = calcA(2.0 * PI, v);
 
-      ll = 10.0 * lineLens.get(col);
+//       ll = 10.0 * lineLens.get(col);
 
-      rad = A_RAD;
-      x1 = rad * cos(theta) + outerDisc.width / 2.0;
-      y1 = rad * sin(theta) + outerDisc.height / 2.0;
-      rad += ll;
-      x2 = rad * cos(theta) + outerDisc.width / 2.0;
-      y2 = rad * sin(theta) + outerDisc.height / 2.0;
-      outerDisc.line(x1, y1, x2, y2);
+//       rad = A_RAD;
+//       x1 = rad * cos(theta) + outerDisc.width / 2.0;
+//       y1 = rad * sin(theta) + outerDisc.height / 2.0;
+//       rad += ll;
+//       x2 = rad * cos(theta) + outerDisc.width / 2.0;
+//       y2 = rad * sin(theta) + outerDisc.height / 2.0;
+//       outerDisc.line(x1, y1, x2, y2);
 
-      theta += PI;
-      rad = A_RAD;
-      x1 = rad * cos(theta) + outerDisc.width / 2.0;
-      y1 = rad * sin(theta) + outerDisc.height / 2.0;
-      rad += ll;
-      x2 = rad * cos(theta) + outerDisc.width / 2.0;
-      y2 = rad * sin(theta) + outerDisc.height / 2.0;
-      outerDisc.line(x1, y1, x2, y2);
-    }
-  }
-} // drawA
+//       theta += PI;
+//       rad = A_RAD;
+//       x1 = rad * cos(theta) + outerDisc.width / 2.0;
+//       y1 = rad * sin(theta) + outerDisc.height / 2.0;
+//       rad += ll;
+//       x2 = rad * cos(theta) + outerDisc.width / 2.0;
+//       y2 = rad * sin(theta) + outerDisc.height / 2.0;
+//       outerDisc.line(x1, y1, x2, y2);
+//     }
+//   }
+// } // drawA
 
 /**
  * Draw the B scale on the inner disc.
@@ -357,7 +357,10 @@ function drawCI() {
  * Draw the D scale on the outer disc.
  */
 function drawD() {
-  outerDisc.fill(K_COLOR);
+  outerDisc.fill(D_COLOR);
+  outerDisc.ellipse(outerDisc.width / 2.0,
+                    outerDisc.height / 2.0,
+                    OUTER_RAD, OUTER_RAD);
   outerDisc.ellipse(
     outerDisc.width / 2.0,
     outerDisc.height / 2.0,
@@ -368,7 +371,7 @@ function drawD() {
 
   outerDisc.text(
     "D",
-    outerDisc.width / 2.0 + D_RAD + (A_RAD - D_RAD) / 2.0,
+    outerDisc.width / 2.0 + D_RAD + (OUTER_RAD - D_RAD) / 2.0,
     outerDisc.height / 2.0 + 20.0
   );
 
@@ -407,78 +410,78 @@ function drawD() {
 /**
  * Draw the K scale on the outer disc.
  */
-function drawK() {
-  outerDisc.fill(B_COLOR);
-  ellipse(outerDisc.width / 2.0, outerDisc.height / 2.0, K_RAD, K_RAD);
-  outerDisc.fill(0);
+// function drawK() {
+//   outerDisc.fill(B_COLOR);
+//   ellipse(outerDisc.width / 2.0, outerDisc.height / 2.0, K_RAD, K_RAD);
+//   outerDisc.fill(0);
 
-  outerDisc.text(
-    "K",
-    outerDisc.width / 2.0 + K_RAD + (D_RAD - K_RAD) / 2.0,
-    outerDisc.height / 2.0 + 20.0
-  );
+//   outerDisc.text(
+//     "K",
+//     outerDisc.width / 2.0 + K_RAD + (D_RAD - K_RAD) / 2.0,
+//     outerDisc.height / 2.0 + 20.0
+//   );
 
-  for (let row = 0; row < K.getRowCount(); row += 2) {
-    r = K.getRow(row);
-    lineLens = K.getRow(row + 1);
+//   for (let row = 0; row < K.getRowCount(); row += 2) {
+//     r = K.getRow(row);
+//     lineLens = K.getRow(row + 1);
 
-    len = r.get(0);
+//     len = r.get(0);
 
-    tic = r.get(1);
-    v = r.get(1);
-    theta = calcK(360.0, v);
+//     tic = r.get(1);
+//     v = r.get(1);
+//     theta = calcK(360.0, v);
 
-    rad = K_RAD + 40.0;
-    x1 = rad * cos(radians(theta)) + windowWidth / 2.0;
-    y1 = rad * sin(radians(theta)) + windowHeight / 2.0;
-    outerDisc.text(tic, x1, y1);
+//     rad = K_RAD + 40.0;
+//     x1 = rad * cos(radians(theta)) + windowWidth / 2.0;
+//     y1 = rad * sin(radians(theta)) + windowHeight / 2.0;
+//     outerDisc.text(tic, x1, y1);
 
-    theta += 120.0;
-    x1 = rad * cos(radians(theta)) + windowWidth / 2.0;
-    y1 = rad * sin(radians(theta)) + windowHeight / 2.0;
-    outerDisc.text(tic, x1, y1);
+//     theta += 120.0;
+//     x1 = rad * cos(radians(theta)) + windowWidth / 2.0;
+//     y1 = rad * sin(radians(theta)) + windowHeight / 2.0;
+//     outerDisc.text(tic, x1, y1);
 
-    theta += 120.0;
-    x1 = rad * cos(radians(theta)) + windowWidth / 2.0;
-    y1 = rad * sin(radians(theta)) + windowHeight / 2.0;
-    outerDisc.text(tic, x1, y1);
+//     theta += 120.0;
+//     x1 = rad * cos(radians(theta)) + windowWidth / 2.0;
+//     y1 = rad * sin(radians(theta)) + windowHeight / 2.0;
+//     outerDisc.text(tic, x1, y1);
 
-    for (let col = 1; col <= len; col++) {
-      v = r.get(col);
-      theta = calcK(360.0, v);
+//     for (let col = 1; col <= len; col++) {
+//       v = r.get(col);
+//       theta = calcK(360.0, v);
 
-      ll = 10.0 * lineLens.get(col);
+//       ll = 10.0 * lineLens.get(col);
 
-      rad = K_RAD;
-      x1 = rad * cos(radians(theta)) + windowWidth / 2.0;
-      y1 = rad * sin(radians(theta)) + windowHeight / 2.0;
-      rad += ll;
-      x2 = rad * cos(radians(theta)) + windowWidth / 2.0;
-      y2 = rad * sin(radians(theta)) + windowHeight / 2.0;
-      outerDisc.line(x1, y1, x2, y2);
+//       rad = K_RAD;
+//       x1 = rad * cos(radians(theta)) + windowWidth / 2.0;
+//       y1 = rad * sin(radians(theta)) + windowHeight / 2.0;
+//       rad += ll;
+//       x2 = rad * cos(radians(theta)) + windowWidth / 2.0;
+//       y2 = rad * sin(radians(theta)) + windowHeight / 2.0;
+//       outerDisc.line(x1, y1, x2, y2);
 
-      theta += 120.0;
+//       theta += 120.0;
 
-      rad = K_RAD;
-      x1 = rad * cos(radians(theta)) + windowWidth / 2.0;
-      y1 = rad * sin(radians(theta)) + windowHeight / 2.0;
-      rad += ll;
-      x2 = rad * cos(radians(theta)) + windowWidth / 2.0;
-      y2 = rad * sin(radians(theta)) + windowHeight / 2.0;
-      outerDisc.line(x1, y1, x2, y2);
+//       rad = K_RAD;
+//       x1 = rad * cos(radians(theta)) + windowWidth / 2.0;
+//       y1 = rad * sin(radians(theta)) + windowHeight / 2.0;
+//       rad += ll;
+//       x2 = rad * cos(radians(theta)) + windowWidth / 2.0;
+//       y2 = rad * sin(radians(theta)) + windowHeight / 2.0;
+//       outerDisc.line(x1, y1, x2, y2);
 
-      theta += 120.0;
+//       theta += 120.0;
 
-      rad = K_RAD;
-      x1 = rad * cos(radians(theta)) + windowWidth / 2.0;
-      y1 = rad * sin(radians(theta)) + windowHeight / 2.0;
-      rad += ll;
-      x2 = rad * cos(radians(theta)) + windowWidth / 2.0;
-      y2 = rad * sin(radians(theta)) + windowHeight / 2.0;
-      outerDisc.line(x1, y1, x2, y2);
-    }
-  }
-} // drawK
+//       rad = K_RAD;
+//       x1 = rad * cos(radians(theta)) + windowWidth / 2.0;
+//       y1 = rad * sin(radians(theta)) + windowHeight / 2.0;
+//       rad += ll;
+//       x2 = rad * cos(radians(theta)) + windowWidth / 2.0;
+//       y2 = rad * sin(radians(theta)) + windowHeight / 2.0;
+//       outerDisc.line(x1, y1, x2, y2);
+//     }
+//   }
+// } // drawK
 
 /**
  * load assets, blocking until complete
@@ -487,7 +490,7 @@ function preload() {
   A = loadTable("../assets/code/A.csv", "csv");
   CI = loadTable("../assets/code/CI.csv", "csv");
   D = loadTable("../assets/code/D.csv", "csv");
-  K = loadTable("../assets/code/K.csv", "csv");
+  // K = loadTable("../assets/code/K.csv", "csv");
 }
 
 /**
@@ -498,20 +501,20 @@ function setup() {
   canvas.parent('csr-holder');
   // fullscreen(true);
 
-  A_COLOR = color(205, 168, 130);
-  D_COLOR = color(212, 181, 149);
-  K_COLOR = color(220, 193, 167);
-  B_COLOR = color(227, 206, 185);
-  C_COLOR = color(234, 219, 203);
-  CI_COLOR = color(255, 255, 255);
+  // A_COLOR = color(205, 168, 130);
+  D_COLOR = color(227,206,185);
+  // K_COLOR = color(220, 193, 167);
+  B_COLOR = color(220,193,167);
+  C_COLOR = color(212,181,149);
+  CI_COLOR = color(205,168,130);
 
   OUTER_RAD = min(windowWidth, windowHeight) / 2.0;
-  A_RAD = OUTER_RAD - 50.0;
-  D_RAD = A_RAD - 50.0;
-  K_RAD = D_RAD - 50.0;
-  B_RAD = K_RAD - 50.0;
-  C_RAD = B_RAD - 50.0;
-  CI_RAD = C_RAD - 50.0;
+  // A_RAD = OUTER_RAD - 50.0;
+  D_RAD = OUTER_RAD - 75.0;
+  // K_RAD = D_RAD - 50.0;
+  B_RAD = D_RAD - 75.0;
+  C_RAD = B_RAD - 75.0;
+  CI_RAD = C_RAD - 75.0;
 
   makeInnerDisc();
   makeOuterDisc();
@@ -585,12 +588,12 @@ function mouseDragged() {
 
 function windowResized() {
   OUTER_RAD = min(windowWidth, windowHeight) / 2.0;
-  A_RAD = OUTER_RAD - 50.0;
-  D_RAD = A_RAD - 50.0;
-  K_RAD = D_RAD - 50.0;
-  B_RAD = K_RAD - 50.0;
-  C_RAD = B_RAD - 50.0;
-  CI_RAD = C_RAD - 50.0;
+  // A_RAD = OUTER_RAD - 50.0;
+  D_RAD = OUTER_RAD - 75.0;
+  // K_RAD = D_RAD - 50.0;
+  B_RAD = D_RAD - 75.0;
+  C_RAD = B_RAD - 75.0;
+  CI_RAD = C_RAD - 75.0;
 
   resizeCanvas(windowWidth, windowHeight);
   
