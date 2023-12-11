@@ -201,7 +201,7 @@ function drawB() {
 
   innerDisc.text(
     "B",
-    innerDisc.width / 2.0 + B_RAD + (OUTER_RAD - B_RAD) / 2.0,
+    innerDisc.width / 2.0 + B_RAD + (D_RAD - B_RAD) / 2.0,
     innerDisc.height / 2.0 + 20.0
   );
 
