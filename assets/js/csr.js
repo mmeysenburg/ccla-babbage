@@ -504,8 +504,8 @@ function setup() {
   // A_COLOR = color(205, 168, 130);
   D_COLOR = color(227,206,185);
   // K_COLOR = color(220, 193, 167);
-  B_COLOR = color(220,193,167);
-  C_COLOR = color(212,181,149);
+  B_COLOR = color(205,168,130);
+  C_COLOR = color(227,206,185);
   CI_COLOR = color(205,168,130);
 
   OUTER_RAD = min(windowWidth, windowHeight) / 2.0;
