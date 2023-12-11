@@ -28,12 +28,12 @@ Click on the "Reset" button to reset the simulator for another computation.
   <table id="tblFD">
     <tr>
       <th>x</th>
-      <th>f(x)</th>
-      <th>d<sub>1</sub>(x)</th>
-      <th>d<sub>2</sub>(x)</th>
-      <th>d<sub>3</sub>(x)</th>
-      <th>d<sub>4</sub>(x)</th>
-      <th>d<sub>5</sub>(x)</th>
+      <th>f(x) = y</th>
+      <th>∆<sup>1</sup>(x)</th>
+      <th>∆<sup>2</sup>(x)</th>
+      <th>∆<sup>3</sup>(x)</th>
+      <th>∆<sup>4</sup>(x)</th>
+      <th>∆<sup>5</sup>(x)</th>
     </tr>
     <tr>
       <td>0</td>
